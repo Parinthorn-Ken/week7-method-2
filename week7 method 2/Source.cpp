@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1 
 #include<stdio.h>
 #include<string.h>
+void triangle(int lenght, char str[10000]);
 int main() {
 	char str[10000];
 	printf("Input : ");
@@ -13,14 +14,19 @@ int main() {
 		len++;
 	}
 	printf("Output : \n");
-	for (;count  >= 0; count--) {
-		len = str;
-		for (int i = 0; i < count; i++) {
+	triangle(count, str);
+	
+	return 0;
+
+}
+void triangle(int lenght, char str[10000]) {
+	for (; lenght >= 0; lenght--) {
+		char* len;
+			len = str;
+		for (int i = 0; i < lenght; i++) {
 			printf("%c", *len);
 			len++;
 		}
 		printf("\n");
 	}
-	return 0;
-
 }
